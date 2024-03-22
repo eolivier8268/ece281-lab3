@@ -1,0 +1,16 @@
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 4cd53e6bbb624592b3d648bdc1c3636b --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot thunderbird_fsm_tb_behav xil_defaultlib.thunderbird_fsm_tb -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture thunderbird_fsm_arch of entity xil_defaultlib.thunderbird_fsm [thunderbird_fsm_default]
+Compiling architecture test_bench of entity xil_defaultlib.thunderbird_fsm_tb
+Built simulation snapshot thunderbird_fsm_tb_behav

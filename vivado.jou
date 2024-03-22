@@ -1,0 +1,141 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Thu Mar 21 21:06:00 2024
+# Process ID: 16284
+# Current directory: C:/ECE281_code/ece281-lab3
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent19184 C:\ECE281_code\ece281-lab3\thunderbird.xpr
+# Log file: C:/ECE281_code/ece281-lab3/vivado.log
+# Journal file: C:/ECE281_code/ece281-lab3\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/ECE281_code/ece281-lab3/thunderbird.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+source thunderbird_fsm_tb.tcl
+close_sim
+launch_simulation
+source thunderbird_fsm_tb.tcl
+close_sim
+launch_simulation
+source thunderbird_fsm_tb.tcl
+set_property -name {xsim.simulate.runtime} -value {900 ns} -objects [get_filesets sim_1]
+update_ip_catalog
+update_ip_catalog
+close_sim
+launch_simulation
+source thunderbird_fsm_tb.tcl
+set_property -name {xsim.simulate.runtime} -value {1000 ns} -objects [get_filesets sim_1]
+update_ip_catalog
+update_ip_catalog
+close_sim
+launch_simulation
+source thunderbird_fsm_tb.tcl
+set_property -name {xsim.simulate.runtime} -value {910 ns} -objects [get_filesets sim_1]
+update_ip_catalog
+update_ip_catalog
+close_sim
+launch_simulation
+source thunderbird_fsm_tb.tcl
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+launch_runs impl_1 -jobs 4
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top top_basys3 [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top top_basys3 [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+open_run impl_1
+open_hw
+connect_hw_server
+disconnect_hw_server localhost:3121
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {C:/ECE281_code/ece281-lab3/thunderbird.runs/impl_1/top_basys3.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/ECE281_code/ece281-lab3/thunderbird.runs/impl_1/top_basys3.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/ECE281_code/ece281-lab3/thunderbird.runs/impl_1/top_basys3.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+launch_simulation
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top thunderbird_fsm_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+close_sim
+launch_simulation
+source thunderbird_fsm_tb.tcl
+close_sim
+launch_simulation
+source thunderbird_fsm_tb.tcl
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top top_basys3 [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+launch_simulation
+source top_basys3.tcl
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top clock_divider_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top thunderbird_fsm_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+current_sim simulation_8
+close_sim
+close_sim
+close_design
+launch_simulation
+source thunderbird_fsm_tb.tcl
+current_wave_config {Untitled 10}
+add_wave {{/thunderbird_fsm_tb/uut/f_state}} 
+current_wave_config {Untitled 10}
+add_wave {{/thunderbird_fsm_tb/uut/f_state_next}} 
+save_wave_config {C:/ECE281_code/ece281-lab3/thunderbird_fsm_tb_behav.wcfg}
+add_files -fileset sim_1 -norecurse C:/ECE281_code/ece281-lab3/thunderbird_fsm_tb_behav.wcfg
+set_property xsim.view C:/ECE281_code/ece281-lab3/thunderbird_fsm_tb_behav.wcfg [get_filesets sim_1]
+close_sim
