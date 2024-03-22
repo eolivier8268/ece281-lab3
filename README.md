@@ -29,8 +29,8 @@ If any of the `assert` statements fail **with** `severity error` then GHDL will 
 
 ## Results
 
-[Waveform for test bench](/img/testbench.png)
+![Waveform for test bench](/img/testbench.png)
 Waveform for test bench 
 
-[Architecture diagram for top_basys3.vhd](/img/arch_diagram.png)
+![Architecture diagram for top_basys3.vhd](/img/arch_diagram.png)
 Architecture diagram for top_basys3.vhd
