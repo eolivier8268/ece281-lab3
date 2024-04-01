@@ -2,8 +2,8 @@
 # Webtalk v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Tue Mar 19 12:53:48 2024
-# Process ID: 18088
+# Start of session at: Fri Mar 29 14:33:15 2024
+# Process ID: 19164
 # Current directory: C:/ECE281_code/ece281-lab3/thunderbird.sim/sim_1/behav/xsim
 # Command line: wbtcv.exe -mode batch -source C:/ECE281_code/ece281-lab3/thunderbird.sim/sim_1/behav/xsim/xsim.dir/thunderbird_fsm_tb_behav/webtalk/xsim_webtalk.tcl -notrace
 # Log file: C:/ECE281_code/ece281-lab3/thunderbird.sim/sim_1/behav/xsim/webtalk.log

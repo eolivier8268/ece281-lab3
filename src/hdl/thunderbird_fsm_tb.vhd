@@ -203,7 +203,8 @@ begin
         w_left <= '1'; wait for 3*k_clk_period;
             w_reset <= '1'; wait for k_clk_period;
             assert w_taillights = "000000" report "reset does not work on L3" severity failure;
-            w_left <= '0'; w_reset <= '0';
+            w_left <= '0'; wait for k_clk_period; 
+            w_reset <= '0';
         -- State 5: R1/one right blinker
         w_right <= '1'; wait for k_clk_period;
             w_reset <= '1'; wait for k_clk_period;
@@ -256,7 +257,8 @@ begin
             assert w_taillights = "111111" report "hazards do not work for interrupted signal" severity failure;
                     
         -- test edge case: one blinker is toggled when in hazard/on state
-        w_reset <= '1'; wait for k_clk_period; w_reset <= '0';
+        w_reset <= '1'; w_left <= '0'; w_right <= '0'; wait for k_clk_period; 
+        w_reset <= '0';
         w_left <= '1'; w_right <= '1'; 
             wait for k_clk_period;
         w_left <= '0'; wait for k_clk_period;
@@ -276,9 +278,12 @@ begin
         wait for 2*k_clk_period;
             assert w_taillights = "000000" report "blinker does not turn off for interrupted signal" severity failure;
         wait for k_clk_period;
-            assert w_taillights = "000100" report "hazards do not work for interrupted signal" severity failure;
+            assert w_taillights = "000100" report "blinker does not flip for interrupted signal" severity failure;
+        wait for 2*k_clk_period;
+            assert w_taillights = "000111" report "blinker does not flip for interrupted signal" severity failure;
         
-        w_reset <= '1'; wait for k_clk_period; w_reset <= '0' ;
+        w_reset <= '1'; w_right <= '0'; wait for k_clk_period; 
+        w_reset <= '0' ;
         
         wait;
     end process;
